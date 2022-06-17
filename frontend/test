@@ -1,0 +1,42 @@
+        data() 
+        {
+            return {data:{}}
+        },
+
+        beforeMount()
+        {
+            this.getUsers();
+        },
+
+        methods:
+        {
+            async getUsers()
+            {
+                const res = await fetch("http://localhost:8000/user");
+                const data = await res.json();
+                console.log(data);
+            }
+        }
+    };
+
+
+
+    data() {
+            return {
+                results: [],
+            }
+        },
+
+        beforeMount() {
+            this.getUsers();
+        },
+        
+        methods:
+        {
+            async getUsers() {
+                const res = await fetch("http://localhost:8000/user");
+                const resul = await res.json();
+                console.log(resul);
+                this.results = resul;
+            }
+        },

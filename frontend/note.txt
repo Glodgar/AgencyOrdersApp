@@ -1,0 +1,6 @@
+mounted() {
+            console.log(process.env.VUE_APP_URL)
+        }
+
+
+do optymalizacji tworzenia nowego zlecenia dodać nową tabelę z ilością istniejących zleceń, aby za każdym razem nie pobierać wszystkich zleceń do obliczenia numeru zlecenia
